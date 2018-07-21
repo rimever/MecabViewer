@@ -33,6 +33,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ほうれん草のアイコン_128x128.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="LibNMeCab, Version=0.0.6.4, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\NMeCab.0.06.4\lib\LibNMeCab.dll</HintPath>
@@ -69,6 +72,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="dic\ipadic\char.bin" />
     <None Include="dic\ipadic\dicrc" />
@@ -91,6 +95,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ほうれん草のアイコン_128x128.ico" />
+    <None Include="Resources\ほうれん草のアイコン_48x48.ico" />
     <Content Include="ScreenShots\SourceAndForm.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
@@ -101,4 +107,7 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\NMeCab.0.06.4\build\NMeCab.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NMeCab.0.06.4\build\NMeCab.targets'))" />
   </Target>
+  <PropertyGroup>
+    <PostBuildEvent>rem 失敗するのでコメントアウト　xcopy /y /i /s /e "$(ProjectDir)dic" "dic"</PostBuildEvent>
+  </PropertyGroup>
 </Project>
