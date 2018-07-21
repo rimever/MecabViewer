@@ -21,6 +21,9 @@ namespace MecabViewer
         private void ButtonUpdateClick(object sender, EventArgs e)
         {
             richTextBox.SuspendLayout();
+            dataGridView.SuspendLayout();
+            dataGridView.Rows.Clear();
+            dataGridView.Columns.Clear();
             richTextBox.Clear();
             MeCabTagger meCabTagger = MeCabTagger.Create();
             MeCabNode node = meCabTagger.ParseToNode(textBoxArea.Text);
@@ -28,6 +31,18 @@ namespace MecabViewer
             {
                 if (node.CharType > 0)
                 {
+                    var data = new List<string> {node.Surface};
+                    data.AddRange(node.Feature.Split(','));
+                    while (dataGridView.Columns.Count < data.Count)
+                    {
+                        dataGridView.Columns.Add(new DataGridViewTextBoxColumn()
+                        {
+                            
+                        });
+                    }
+
+                    dataGridView.Rows.Add(data.ToArray());
+
                     if (node.Feature.Contains("固有名詞"))
                     {
                         richTextBox.SelectionBackColor = Color.Yellow;
@@ -42,7 +57,7 @@ namespace MecabViewer
                 node = node.Next;
             }
             richTextBox.ResumeLayout();
-            
+            dataGridView.ResumeLayout();
         }
     }
 }

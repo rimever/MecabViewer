@@ -33,10 +33,12 @@
             this.splitContainer = new System.Windows.Forms.SplitContainer();
             this.textBoxArea = new System.Windows.Forms.TextBox();
             this.richTextBox = new System.Windows.Forms.RichTextBox();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
             this.splitContainer.Panel1.SuspendLayout();
             this.splitContainer.Panel2.SuspendLayout();
             this.splitContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -50,7 +52,7 @@
             // 
             // buttonUpdate
             // 
-            this.buttonUpdate.Location = new System.Drawing.Point(848, 499);
+            this.buttonUpdate.Location = new System.Drawing.Point(852, 369);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(75, 23);
             this.buttonUpdate.TabIndex = 2;
@@ -70,7 +72,7 @@
             // splitContainer.Panel2
             // 
             this.splitContainer.Panel2.Controls.Add(this.richTextBox);
-            this.splitContainer.Size = new System.Drawing.Size(927, 481);
+            this.splitContainer.Size = new System.Drawing.Size(927, 351);
             this.splitContainer.SplitterDistance = 417;
             this.splitContainer.TabIndex = 4;
             // 
@@ -80,7 +82,7 @@
             this.textBoxArea.Location = new System.Drawing.Point(0, 0);
             this.textBoxArea.Multiline = true;
             this.textBoxArea.Name = "textBoxArea";
-            this.textBoxArea.Size = new System.Drawing.Size(417, 481);
+            this.textBoxArea.Size = new System.Drawing.Size(417, 351);
             this.textBoxArea.TabIndex = 1;
             // 
             // richTextBox
@@ -89,15 +91,28 @@
             this.richTextBox.Location = new System.Drawing.Point(0, 0);
             this.richTextBox.Name = "richTextBox";
             this.richTextBox.ReadOnly = true;
-            this.richTextBox.Size = new System.Drawing.Size(506, 481);
+            this.richTextBox.Size = new System.Drawing.Size(506, 351);
             this.richTextBox.TabIndex = 4;
             this.richTextBox.Text = "";
+            // 
+            // dataGridView
+            // 
+            this.dataGridView.AllowUserToAddRows = false;
+            this.dataGridView.AllowUserToDeleteRows = false;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Location = new System.Drawing.Point(12, 369);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.ReadOnly = true;
+            this.dataGridView.RowTemplate.Height = 33;
+            this.dataGridView.Size = new System.Drawing.Size(830, 168);
+            this.dataGridView.TabIndex = 5;
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(939, 562);
+            this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.splitContainer);
             this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.statusStrip1);
@@ -110,6 +125,7 @@
             this.splitContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).EndInit();
             this.splitContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -121,6 +137,7 @@
         private System.Windows.Forms.SplitContainer splitContainer;
         private System.Windows.Forms.TextBox textBoxArea;
         private System.Windows.Forms.RichTextBox richTextBox;
+        private System.Windows.Forms.DataGridView dataGridView;
     }
 }
 
