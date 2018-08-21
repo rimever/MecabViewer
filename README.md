@@ -1,15 +1,19 @@
 # MecabViewer
 
-�߂��Ԃт�[��[�ɂ���
+めかぶびゅーわーについて
 
-�܂��쐬���̃c�[���ł��B
+まだ作成中のツールです。
 
-Mecab�����p���āA�ŗL�����𔲂��o���r���[�A�ł��B
-�f�[�^�Ɍl�����܂�ł��Ȃ����̃`�F�b�N���s������ړI�Ƃ��Ă��܂��B
+Mecabを活用して、固有名詞を抜き出すビューアです。
+データに個人情報を含んでいないかのチェックを行うかを目的としています。
 
-## �f��
+## スクリーンショット
 
-���L�T�C�g�̑f�ނ𗘗p�����Ă��������Ă��܂��B
+![スクリーンショット](https://github.com/rimever/MecabViewer/blob/master/MecabViewer/ScreenShots/SourceAndForm.png)
+
+## 素材
+
+下記サイトの素材を利用させていただいています。
 
 http://icooon-mono.com/
 
